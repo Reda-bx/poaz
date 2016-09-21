@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 export default class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {file: '', imagePreviewUrl: ''}
+  }
   render() {
     return (
-      <div>
-        <h1>File Upload</h1>
-        <p>Try uxsploading multiple files at a time.</p>
-        <form action="/upload" method="post" enctype="multipart/form-data">
-          <input type="file" name="file" multiple />
-          <input type="submit" value="Upload" />
-        </form>
+      <div className="app">
+        <h1>YO</h1>
       </div>
     )
   }

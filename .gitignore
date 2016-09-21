@@ -1,3 +1,6 @@
+# React Builds
+/public/app.bundle.js
+
 # Logs
 logs
 *.log
