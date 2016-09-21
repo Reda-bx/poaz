@@ -1,0 +1,7 @@
+.game div {
+  float: left;
+}
+.game {
+  height: 450px;
+  width: 450px
+}
