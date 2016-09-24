@@ -9,7 +9,8 @@ export default class App extends Component {
       pic: ['futurama', 'nemo', 'rio', 'up', 'simpsons'],
       imgSrc: 'http://lorempicsum.com/futurama/450/450/1',
       blockedX: 0,
-      blockedY: 2
+      blockedY: 2,
+      ready: false
     }
   }
   randomNumber() {
@@ -20,7 +21,7 @@ export default class App extends Component {
     })
   }
   startGame() {
-    console.log('noice')
+    this.setState({ready: true})
   }
   handleButtonPress(e) {
     switch (e.keyCode) {
@@ -103,11 +104,12 @@ export default class App extends Component {
     )
   }
   render() {
+    let ready_button = this.state.ready ? '' : <button onClick={this.randomNumber.bind(this)}>Next Image</button>
     return (
       <div className="container">
         <div>
           <button onClick={this.startGame.bind(this)}>Ready</button>
-          <button onClick={this.randomNumber.bind(this)}>Next Image</button>
+          {ready_button}
         </div>
         <div className="game">
           {this.renderGame()}
