@@ -10,8 +10,13 @@ export const Tile = styled.div`
   height: 150px;
   width: 150px;
   background: ${props => props.bg};
-  background-position-x: ${props => props.positionX * 2 * 150}px;
-  background-position-y: ${props => props.positionY * 2 * 150}px;
+  background-position-x: ${props => props.positionX * 50}%;
+  background-position-y: ${props => props.positionY * 50}%;
+  @media screen and (max-width: 450px) {
+    background-size: 100vw;
+    height: calc(100vw / 3);
+    width: calc(100vw / 3);
+  }
 `
 
 export const Row = styled.div`
